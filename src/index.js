@@ -1,7 +1,17 @@
+import './css/main.css';
 import { refs } from './js/refs';
 import { fetchBreeds, fetchCatByBreed } from './js/cat-api';
+import SlimSelect from 'slim-select';
+import 'slim-select/dist/slimselect.css';
 // import { renderByOptions, createBreedsList } from './js/select-list';
 
+refs.catBreedsList.setAttribute('id', 'single');
+refs.loaderRef.insertAdjacentHTML(
+  'beforebegin',
+  `<div class="load"><span class='load-img'></span></div>`
+);
+
+// handleLoadingActive();
 createBreedsList();
 
 refs.catBreedsList.addEventListener('change', createCatDescription);
@@ -13,6 +23,9 @@ function renderByOptions(base) {
     })
     .join('');
   refs.catBreedsList.insertAdjacentHTML('beforeend', markup);
+  new SlimSelect({
+    select: '#single',
+  });
 }
 
 function createBreedsList() {
@@ -42,4 +55,10 @@ function renderDescription(data) {
   });
 
   refs.catInfoRef.insertAdjacentHTML('beforeend', catDescr);
+}
+
+function handleLoadingActive() {
+  const loadImage = document.querySelector('div.load');
+  refs.loaderRef.classList.add('active');
+  loadImage.classList.add('active');
 }
