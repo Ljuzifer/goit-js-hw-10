@@ -13,7 +13,9 @@ function renderByOptions(base) {
 }
 
 function createBreedsList() {
-  fetchBreeds().then(breeds => {
-    renderByOptions(breeds);
+  const startOption = `<option value="-Tap here-"><span class="start-tap">-Tap here-</span></option>`;
+  refs.catBreedsList.insertAdjacentHTML('afterbegin', startOption);
+  fetchBreeds().then(res => {
+    renderByOptions(res);
   });
 }
