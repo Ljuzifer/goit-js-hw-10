@@ -36,7 +36,7 @@ function renderByOptions(base) {
 }
 
 function createBreedsList() {
-  const startOption = `<option value="-Tap here-"><span class="start-tap">-Tap here-</span></option>`;
+  const startOption = `<option value="--Tap here--">--Tap here--</option>`;
   refs.catBreedsList.insertAdjacentHTML('afterbegin', startOption);
   fetchBreeds().then(res => {
     renderByOptions(res);
@@ -59,7 +59,7 @@ function renderDescription(data) {
       <div class="cat-descr">
         <h2 class="cat-name">${breeds[0].name}</h2>
         <p class="about">${breeds[0].description}</p>
-        <p class="tempo">Temperament: ${breeds[0].temperament}</p>
+        <p><span class="tempo">Temperament: </span>${breeds[0].temperament}</p>
       </div>`;
     });
 

@@ -12,9 +12,13 @@ const options = {
 };
 
 function fetchBreeds() {
-  return fetch(CAT_BREED_KEY, options).then(res => {
-    return res.json();
-  });
+  return fetch(CAT_BREED_KEY, options)
+    .then(res => {
+      return res.json();
+    })
+    .catch(err => {
+      console.log(err);
+    });
 }
 
 function fetchCatByBreed(breedId) {

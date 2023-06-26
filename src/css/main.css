@@ -1,7 +1,7 @@
 .load-img {
   transform: rotateZ(45deg);
   perspective: 1000px;
-  border-radius: 50%;
+  border-radius: 80%;
   width: 200px;
   height: 200px;
   color: #fffb04;
@@ -15,7 +15,7 @@
   left: 0;
   width: inherit;
   height: inherit;
-  border-radius: 50%;
+  border-radius: 80%;
   transform: rotateX(70deg);
   animation: 1s spin linear infinite;
 }
@@ -70,8 +70,16 @@
     box-shadow: 0.2em -0.2em 0 0 currentcolor;
   }
 }
+
 select {
   margin-bottom: 20px;
+}
+
+.ss-single {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: normal;
+  font-size: 22px;
+  color: rgba(13, 13, 13, 0.888);
 }
 
 .ss-main {
@@ -116,4 +124,26 @@ p.loader {
 
 p.error {
   text-align: center;
+}
+
+.cat-name {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 38px;
+}
+.tempo {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.cat-info {
+  display: flex;
+}
+
+.cat-descr {
+  margin-left: 10px;
+}
+
+img {
+  display: block;
 }
