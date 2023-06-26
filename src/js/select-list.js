@@ -1,21 +1,16 @@
 import { refs } from './refs';
-import { fetchBreeds } from './cat-api';
+import { loadImage } from '../index';
 
-export { renderByOptions, createBreedsList };
+export { handleLoadingActive, handleLoadingDisable };
 
-function renderByOptions(base) {
-  const markup = base
-    .map(({ id, name }) => {
-      return `<option value=${id}>${name}</option>`;
-    })
-    .join('');
-  refs.catBreedsList.insertAdjacentHTML('beforeend', markup);
+function handleLoadingActive() {
+  refs.catBreedsList.style.visibility = 'hidden';
+  refs.loaderRef.classList.add('active');
+  loadImage.classList.add('active');
 }
 
-function createBreedsList() {
-  const startOption = `<option value="-Tap here-"><span class="start-tap">-Tap here-</span></option>`;
-  refs.catBreedsList.insertAdjacentHTML('afterbegin', startOption);
-  fetchBreeds().then(res => {
-    renderByOptions(res);
-  });
+function handleLoadingDisable() {
+  refs.catBreedsList.style.visibility = 'visible';
+  refs.loaderRef.classList.remove('active');
+  loadImage.classList.remove('active');
 }

@@ -3,4 +3,5 @@ export const refs = {
   loaderRef: document.querySelector('.loader'),
   errorRef: document.querySelector('.error'),
   catInfoRef: document.querySelector('.cat-info'),
+  // loadImage: document.querySelector('div.load'),
 };
