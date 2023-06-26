@@ -2,8 +2,8 @@
   transform: rotateZ(45deg);
   perspective: 1000px;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   color: #fffb04;
 }
 .load-img:before,
@@ -70,6 +70,14 @@
     box-shadow: 0.2em -0.2em 0 0 currentcolor;
   }
 }
+select {
+  margin-bottom: 20px;
+}
+
+.ss-main {
+  height: 40px;
+  margin-bottom: 20px;
+}
 
 .ss-main .ss-values {
   justify-content: center;
@@ -98,8 +106,8 @@ p.error.active {
 div.load {
   position: relative;
   margin: 20px auto 10px;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
 }
 
 p.loader {
