@@ -1,10 +1,5 @@
 export { fetchBreeds, fetchCatByBreed };
 
-import { Notify } from 'notiflix';
-import { refs } from './refs';
-import { handleLoadingDisable } from './select-list';
-import { Notify } from 'notiflix';
-
 const API_KEY =
   'live_b58inZFyIYUTFHaXaplUw39kbzxywyhdTVeSssZKw2aEK89V4d79im36h1AQ4xFV';
 const CAT_BREED_KEY = 'https://api.thecatapi.com/v1/breeds';

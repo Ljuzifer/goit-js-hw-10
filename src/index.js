@@ -4,7 +4,7 @@ import { refs } from './js/refs';
 import { fetchBreeds, fetchCatByBreed } from './js/cat-api';
 import SlimSelect from 'slim-select';
 import 'slim-select/dist/slimselect.css';
-import { handleLoadingActive, handleLoadingDisable } from './js/select-list';
+import { handleLoadingActive, handleLoadingDisable } from './js/loading';
 
 new SlimSelect({
   select: '#single',
@@ -16,7 +16,7 @@ const notiOps = {
   position: 'center-bottom',
   distance: '33px',
   borderRadius: '13px',
-  timeout: 4000,
+  timeout: 2800,
   clickToClose: true,
   cssAnimationStyle: 'from-right',
 };
@@ -72,6 +72,11 @@ function createCatDescription() {
   let breedId = refs.catBreedsList.value;
   fetchCatByBreed(breedId)
     .then(data => {
+      if (breedId === '--Tap here--') {
+        handleLoadingDisable();
+        Notify.success('Tap and try to choose one...', notiOps);
+        return;
+      }
       renderDescription(data);
       Notify.success('Very good choice!!! :)', notiOps);
     })

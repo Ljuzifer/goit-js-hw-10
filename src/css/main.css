@@ -1,5 +1,9 @@
 body {
   background-color: darkgray;
+  /* background-image: url(../img/citty.jpg); */
+  /* background-image: url(../img/cat.jpg); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
 }
 
 .load-img {
@@ -101,6 +105,14 @@ select {
 
 ::placeholder {
   text-align: center;
+}
+
+p.loader {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #1a1a07;
 }
 
 div.load,
