@@ -16,7 +16,7 @@ const notiOps = {
   position: 'center-bottom',
   distance: '33px',
   borderRadius: '13px',
-  timeout: 2800,
+  timeout: 2200,
   clickToClose: true,
   cssAnimationStyle: 'from-right',
 };
